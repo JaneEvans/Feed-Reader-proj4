@@ -63,7 +63,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
         it('is hidden', function() {
-            expect(body).toHaveClass('menu-hidden');
+            expect(body).toHaveClass('menu-hidden'); //!!require jasmine 3.2.1 or higher 
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -112,12 +112,13 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         beforeEach(function(done) {
-            loadFeed(0);
+            loadFeed(0); //first time load feeds
             feed0 = $('.feed')[0].children;
             for(let feed of feed0){
                 feed0List.push(feed.innerText);
             }
-            loadFeed(1, done);
+
+            loadFeed(1, done); //second time load feeds then start testing
 
         });
 
