@@ -90,6 +90,7 @@ $(function() {
                     for(let feed of feed1){
                         feed1List.push(feed.innerText);
                     }
+                    done();
                 }); 
             });
 
